@@ -2,6 +2,7 @@ import sys
 import math
 
 error = False; #flag to show if error
+steps = 0; #number of steps
 
 try:
     # Prompt the user to enter a number
@@ -39,6 +40,8 @@ while inputNumber != 1:
     #because what else would we be?
     else:
         inputNumber = inputNumber * 3 + 1;
+
+    steps += 1; #add one to the number of steps
          
      #return to the beginning of the while loop
 
@@ -51,6 +54,7 @@ if error == True:
 else:
     print(int(inputNumber));
     print("Number reached 1 successfully. Exiting...");
+    print("Number of Steps: " + str(steps));
 
 exit(0);
 
